@@ -12,6 +12,7 @@
        <table class = "table table-striped">
            <thead>
                <tr>
+                   <th>Rank</th>
                    <th>User</th>
                    <th>Games Won</th>
                    <th>Games Lost</th>
@@ -20,6 +21,7 @@
             </thead>
             {% for row in leaderboard %}
                 <tr>
+                    <td>{{ loop.index }}.</td>
                     <td>{{ row['username'] }}</td>
                     <td>{{ row['total_wins'] }}</td>
                     <td>{{ row['total_losses'] }}</td>
