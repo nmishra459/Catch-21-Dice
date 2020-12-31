@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Play
+{% endblock %}
+
+{% block main %}
+
+        <p class = "bold" id="result"></p> <!--Conceptualzied from Lab 8: Trivia!-->
+
+        <div class="grid-container">
+            <div class="title">
+                The Catch 21: Dice Game
+            </div>
+            <div id="player1-background">
+                <h2 id= "player1-name">{{ player_one_name }}</h2>
+                <p  id= "player1-text">It is your turn</p>
+                <h1 id= "player1-score">Score: 0</h1>
+            </div>
+
+            <div class="button-panel">
+                <button class="roll-button" onclick="roll()">Roll</button>
+                <button class="stay-button" onclick="stay()">Stay</button>
+                <button class="fold-button" onclick="fold()">Fold</button>
+                <img id="dice-img" src="./static/dice.png" alt="Dice Landed on 1">
+            </div>
+
+                <div id="player2-background">
+                <h2 id="player2-name">{{ player_two_name }}</h2>
+                <p  id="player2-text">It is not your turn</p>
+                <h1 id="player2-score">Score: 0</h1>
+            </div>
+        </div>
+
+
+        <br>
+
+        <form action="/end_match" method="post">
+            <!--Forms used to send data to be processed with Python with POST, avoiding the use of AJAX -->
+            <div class="form-group align_inputs">
+                <label for="player1-name"><strong>Player 1</strong>: </label>
+                <input readonly style="width:100px;" class="form-control" name="p1-name" id = "p1-name" value = {{ player_one_name }} type="text">
+            </div>
+
+            <div class="form-group align_inputs">
+                <label for="player1-wins">Wins</label>
+                <input readonly style="width:50px;" class="form-control" name="player1-wins" id = "player1-wins" placeholder="0" type="number">
+            </div>
+
+            <div class="form-group align_inputs">
+                <label for="player1-losses">Losses</label>
+                <input readonly style="width:50px;" class="form-control" name="player1-losses" id = "player1-losses" placeholder="0" type="number">
+            </div>
+
+            <div class="form-group align_inputs">
+                <label for="player2-name"><strong>Player 2</strong>: </label>
+                <input readonly style="width:100px;" class="form-control" name="p2-name" id = "p2-name" value = {{ player_two_name }} type="text">
+            </div>
+
+            <div class="form-group align_inputs">
+                <label for="player2-wins">Wins</label>
+                <input readonly style="width:50px;" class="form-control" name="player2-wins" id = "player2-wins" placeholder="0" type="number">
+            </div>
+
+            <div class="form-group align_inputs">
+                <label for="player2-losses">Losses</label>
+                <input readonly style="width:50px;" class="form-control" name="player2-losses" id = "player2-losses" placeholder="0" type="number">
+            </div>
+            <button class="btn btn-primary" type="submit">End Match!</button>
+        </form>
+
+{% endblock %}

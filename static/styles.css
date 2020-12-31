@@ -1,0 +1,205 @@
+
+body {
+    background-color: #FFFFFF;
+    color: #212529;
+    background-image: linear-gradient(white, lightblue);
+    background-size: 300px 5000px;
+    font-size: 1rem;
+    font-weight:400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    height: 50%;
+}
+
+#rules li {
+    list-style-type: none;
+}
+
+input {
+    margin-right:15px;
+}
+
+.align_inputs
+{
+    display:inline;
+}
+
+.bold {
+    font-size: 19px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 95px 200px;
+    grid-template-rows: 50px 250px;
+    grid-gap: 5px;
+}
+
+.title {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    color : #7300E6;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: italic;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#player1-background {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    background-color: #90EE90;
+    color: #000000;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #000000;
+}
+
+#player2-background {
+    grid-column-start: 5;
+    grid-column-end: 6;
+
+    background-color: #DCDCDC;
+    color: #A9A9A9;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #000000;
+}
+
+#player1-name {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#player1-text {
+    padding-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+#player1-score {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+
+#player2-name {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#player2-text {
+    padding-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+#player2-score {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.button-panel {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: #FFFFFF;
+}
+
+.roll-button {
+    color: #000000;
+    background-color: #34EB43;
+    border: none;
+    padding: 8px 34px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.stay-button {
+    color: #000000;
+    background-color: rgb(235, 150, 52);
+    border: none;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.fold-button {
+    color: #000000;
+    background-color: rgb(235, 52, 52);
+    border: none;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+#dice-img {
+    width: 80px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 5px;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Holdings
+{% endblock %}
+
+{% block main %}
+   <!--Modeled after HMTL seen in the staff solution -->
+<body>
+    <div class = "container" align = "center">
+        <p>
+            <h3><strong>Welcome to Catch 21: Dice!</strong></h3>
+            <p>
+                <ul id = 'rules' style="padding:2px 6px 4px 6px; color: #555555; border-radius: 25px; background-color: #A6F4FF; border: #FFFFFF 2px solid">
+                    <li><strong>THE RULES</strong><br></li>
+                    <li>- Catch 21: Dice is a two player game. Each player will get to take turns rolling the rice to score 21 points.</li>
+                    <li>- When its their turn, a player can choose to roll the dice to increase their total score by clicking the "roll" button. Try it!</li>
+                    <li><button class="roll-button" onclick="roll()">Roll</button> <img id="dice-img" src="./static/dice.png" alt="Dice Landed on 1"> </li>
+                    <li>- Alternatively, a player can choose to stay at their current score by clicking the button "stay." </li>
+                    <li>- If a player is comfortable enough with their current score and wants to withdraw from the game, they can click "fold." </li>
+
+                    <br />
+
+                    <li><strong>There are three different ways a player can win.</strong></li>
+                    <li> 1) If the opposing player's score exceeds 21. </li>
+                    <li> 2) If they score 21 points before the other player. </li>
+                    <li> 3) If, when they choose to fold by clicking the "fold" button, the opposing player reaches a lower score than them and folds. </li>
+
+                </ul>
+            </p> <br>
+                    <p>Alright, ready to play? Click this button to get started!</p>
+
+                    <a class="roll-button" href="/second_login">Play!</a>
+
+
+    </div>
+</body>
+
+{% endblock %}

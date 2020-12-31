@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Holdings
+{% endblock %}
+
+{% block main %}
+   <!--Modeled after HMTL seen in the staff solution -->
+   <div class = "container p-5">
+        <h1 style="color:purple">Your Stats</h1>
+        <p>Here's where you can see the results of each individual match you've played</p>
+       <table class = "table table-striped">
+           <thead>
+               <tr>
+                   <th>Time</th>
+                   <th>Opponent</th>
+                   <th>Games Won</th>
+                   <th>Games Lost</th>
+                   <th>Games Played</th>
+               </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+            {% for row in stats %}
+                <tr>
+                    <td>{{ row['time'] }}</td>
+                    <td>{{ row['opponent'] }}</td>
+                    <td>{{ row['games_won'] }}</td>
+                    <td>{{ row['games_lost'] }}</td>
+                    <td>{{ row['games_played'] }}</td>
+                </tr>
+            {% endfor %}
+       </table>
+   </div>
+
+{% endblock %}

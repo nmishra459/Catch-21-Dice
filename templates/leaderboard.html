@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Holdings
+{% endblock %}
+
+{% block main %}
+   <!--Modeled after HMTL seen in the staff solution -->
+   <div class = "container p-5">
+       <h1 style="color:darkblue">Leaderboard</h1>
+       <p>Here's where you can see where you rank against other users!</p>
+       <table class = "table table-striped">
+           <thead>
+               <tr>
+                   <th>User</th>
+                   <th>Games Won</th>
+                   <th>Games Lost</th>
+                   <th>Games Played</th>
+               </tr>
+            </thead>
+            {% for row in leaderboard %}
+                <tr>
+                    <td>{{ row['username'] }}</td>
+                    <td>{{ row['total_wins'] }}</td>
+                    <td>{{ row['total_losses'] }}</td>
+                    <td>{{ row["total_played"] }} </td>
+                </tr>
+            {% endfor %}
+       </table>
+   </div>
+
+{% endblock %}

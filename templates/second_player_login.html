@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Second Player Log-In
+{% endblock %}
+
+{% block main %}
+    <h1 style="color:darkgreen">Player 2 Log-in</h1>
+    <p>Yay! Let's play some rounds. If Player 2 has a Catch 21: Dice account, they can log in here...</p> <br>
+
+    <form action="/second_login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <button name = "2p_log_in" class="btn btn-primary" type="submit">Log In</button>
+    </form>
+
+    <br>
+
+    <p>Or alternatively, player 2 can play as a guest!</p>
+
+    <form action="/guest" method="post">
+        <button name = "guest" class="btn btn-success" type="submit">Play as Guest</button>
+    </form>
+{% endblock %}

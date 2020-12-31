@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <img width="100" height="100" src=static/dice6.jpg alt="Responsive image">
+    <img width="100" height="100" src=static/dice3.jpg alt="Responsive image">
+    <img width="100" height="100" src=static/dice4.jpg alt="Responsive image"><h1 style="color: darkblue;">CATCH 21: DICE</h1><img width="100" height="100" src=static/dice1.jpg alt="Responsive image">
+    <img width="100" height="100" src=static/dice2.jpg alt="Responsive image">
+    <img width="100" height="100" src=static/dice5.jpg alt="Responsive image">
+
+    <p></p>
+
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+{% endblock %}
