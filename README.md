@@ -1,4 +1,4 @@
-# Catch 21: Dice
+## Catch 21: Dice
 ### By Omar Wahby and Nishant Mishra
 
 ![Catch_21_Dice](https://user-images.githubusercontent.com/54038104/102028625-2cfc4700-3d79-11eb-937e-9087a06c4936.PNG)
