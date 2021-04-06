@@ -3,9 +3,11 @@
 
 ![Catch_21_Dice](https://user-images.githubusercontent.com/54038104/102028625-2cfc4700-3d79-11eb-937e-9087a06c4936.PNG)
 
-### Link to Video Demo: https://youtu.be/euf5um5zlSY
+Description: A web application (Flask, Jinja, Python) that features a two-player dice game (JavaScript), along with a personalized stats page and global leaderboard ranking all registered users (SQL). Front-end designed with HTML5/CSS and Bootstrap 4. Final project for CS50!
 
 ### Link to Deployed Website (Heroku): https://catch-21-dice.herokuapp.com/login
+
+### Link to Video Demo: https://youtu.be/euf5um5zlSY
 
 ## Instructions on how to configure the project files to ensure proper functionality
 
